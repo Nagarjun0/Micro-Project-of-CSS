@@ -1,0 +1,29 @@
+<html>
+<head>
+<title></title>
+</head>
+<script language="Javascript" >
+MyBanners=new Array('colosseum.jpeg','chichenItza.jpeg','statueChristtheRedeemer.jpeg','tajMahal.jpeg','machaPicchu.jpeg','greatWallOfChain.jpeg','petra.jpeg');
+
+MyBannerLinks=new Array('colosseum.html','chichenItza.html','statueChristtheRedeemer.html','tajMahal.html','machaPicchu.html','greatWallOfChain.html','petra.html');
+banner=0;
+function ShowLinks()
+{document.location.href=MyBannerLinks[banner];
+	target="abc"}
+function ShowBanners()
+{ 
+if (document.images)
+{ 
+banner++;
+if (banner==MyBanners.length) 
+{banner=0;}
+document.ChangeBanner.src=MyBanners[banner];
+setTimeout("ShowBanners()",1000);
+}
+}
+</script>
+<body onload="ShowBanners()">
+<a href="javascript: ShowLinks()" >
+<img src="tajMahal.jpeg" width="745" height="620" name="ChangeBanner" />
+ </body>
+</html>
